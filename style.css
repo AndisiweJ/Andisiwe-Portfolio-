@@ -1,0 +1,13 @@
+.h1 {
+    width: 327px;
+    height: 124px;
+    
+    font-family: 'Crete Round';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 64px;
+    /* or 114% */
+    
+    letter-spacing: 0.37px;
+}
