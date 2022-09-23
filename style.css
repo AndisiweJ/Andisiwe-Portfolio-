@@ -49,6 +49,12 @@ nav a:hover {
   transition: 0.4s;
 }
 
+section {
+  padding: 30px;
+  margin: 10px;
+  margin-top: 50px;
+}
+
 h1 {
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
   font-family: 'Crete Round';
@@ -82,11 +88,6 @@ h3 {
   line-height: 24px;
   color: #fefcfc;
 }
-
-section {
-  padding: 20px 80px;
-}
-
 /* stylelint-disable-next-line no-descending-specificity */
 .social-media a {
   padding: 1rem;
@@ -102,6 +103,6 @@ section {
   transition: 0.4s;
 }
 
-ul {
-  display: flex;
+li {
+  display: inline;
 }
