@@ -279,7 +279,7 @@ p {
   list-style-type: none;
   width: 30%;
   background: #58595c;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .btn {
@@ -353,7 +353,7 @@ p {
 
 .tools {
   position: relative;
-  top: -200px;
+  top: -500px;
 }
 
 .toolhead {
