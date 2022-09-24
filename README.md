@@ -45,7 +45,7 @@ Linters
 👤 **Author1**
 
 - GitHub: [@githubhandle](https://github.com/AndisiweJ)
-- LinkedIn: [LinkedIn](://www.linkedijafta-2n.com/in/andisiwe-68550134)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/andisiwe-268550134)
 
 ## 🤝 Contributing
 
