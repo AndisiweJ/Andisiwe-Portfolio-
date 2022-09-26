@@ -15,7 +15,7 @@
   justify-content: center;
   background-image: url(Images/illustration-header-mobile.png);
   background-repeat: no-repeat;
-  background-position: right 210px;
+  background-position: right 300px;
 }
 
 .nav {
@@ -37,9 +37,11 @@
 }
 
 .introduction {
-  padding: 30px;
-  margin-top: 50px;
+  padding-top: 30px;
+  padding-left: 20px;
+  margin-top: 70px;
   position: relative;
+  padding-right: 15px;
 }
 
 .headsec {
@@ -59,7 +61,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 32px;
   display: flex;
   align-items: center;
@@ -74,20 +76,33 @@ p {
   font-size: 16px;
   line-height: 24px;
   color: #fefcfc;
-}
-
-.social-media a {
-  padding: 1rem;
-  color: white;
-  font-size: 1.5rem;
-  transition: 3s;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
 }
 
 .nav a {
   text-decoration: none;
   color: #ffff;
-  padding: 0.7rem;
-  font-size: 1rem;
+  padding: 0.9rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.social-media a {
+  color: #dbd8d7;
+  font-size: 25px;
+  width: 16px;
+}
+
+.nav a:hover {
+  background: rgb(97, 91, 91);
+  color: rgb(97, 91, 91);
+  transition: 0.5s;
+  height: 10px;
 }
 
 .social-media a:hover {
@@ -97,15 +112,13 @@ p {
   transition: 0.4s;
 }
 
-.nav a:hover {
-  background: hwb(25 0% 0%);
-  color: rgb(97, 91, 91);
-  transition: 0.4s;
-}
-
 .social {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 9rem;
+  list-style: none;
+  padding-bottom: 7rem;
 }
 
 .mainmyworks {
@@ -129,21 +142,22 @@ p {
   order: 0;
   flex-grow: 0;
   text-decoration: none;
-  padding-left: 20%;
-  padding-right: 10%;
+  padding-left: 70px;
 }
 
 .liner {
   color: rgb(11, 0, 0);
   border-bottom: none;
   margin-bottom: 80px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .workitems {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
-  padding: 10%;
+  padding: 20px;
 }
 
 .photo img {
@@ -165,7 +179,6 @@ p {
   flex: none;
   order: 0;
   flex-grow: 0;
-  padding-left: 7px;
 }
 
 .page p {
@@ -179,7 +192,6 @@ p {
   flex: none;
   order: 1;
   flex-grow: 0;
-  padding: 10px;
 }
 
 .pagelinks {
@@ -189,7 +201,8 @@ p {
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
-  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .pagelinks li {
@@ -202,14 +215,14 @@ p {
   font-size: 15px;
   line-height: 10px;
   color: black;
-  border: #888b90 solid 0.1px;
+  border: #888b90 solid 0.11px;
   width: fit-content;
-  padding: 8px;
+  padding: 15px;
 }
 
 .button {
   /* background-color: #ff6b00; */
-  padding: 12px;
+  padding: 15px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -241,7 +254,7 @@ p {
   background-image: url(Images/Background.png);
   background-position: center;
   background-size: no-repeat;
-  margin: 25px;
+  margin: 20px;
 }
 
 .contenthead {
@@ -249,7 +262,7 @@ p {
   font-family: 'Crete Round';
   font-style: normal;
   font-weight: 400;
-  font-size: 38px;
+  font-size: 32px;
   line-height: 44px;
   color: #fdf6f6;
   flex: none;
@@ -331,10 +344,10 @@ p {
 
 .aboutsection {
   background-color: #1c1a19;
-  padding-bottom: 65%;
   background-image: url(Images/illustration-about-me-mobile.png);
   background-repeat: no-repeat;
   background-position: right 270px;
+  padding-bottom: 55%;
 }
 
 .about-part {
@@ -400,12 +413,13 @@ p {
   color: rgb(251, 242, 242);
   border-bottom: none;
   margin-bottom: 100%;
-  margin-top: 70%;
+  margin-top: 40%;
 }
 
 .tools {
   position: relative;
-  top: -500px;
+  top: -420px;
+  padding-bottom: 10%;
 }
 
 .toolhead {
@@ -413,7 +427,7 @@ p {
   font-family: 'InaiMathi';
   font-style: normal;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 32px;
   color: hsl(0, 0%, 100%);
   flex: none;
   order: 1;
@@ -428,8 +442,8 @@ p {
 }
 
 .toolhead img {
-  margin-top: -80px;
-  margin-left: -37px;
+  margin-top: -75px;
+  margin-left: -35px;
 }
 
 .toolhead li {
@@ -437,7 +451,7 @@ p {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 22px;
   line-height: 43px;
   display: inline-block;
   align-items: center;
