@@ -142,7 +142,7 @@ p {
   order: 0;
   flex-grow: 0;
   text-decoration: none;
-  padding-left: 40px;
+  padding: 20px;
 }
 
 .liner {
@@ -171,7 +171,7 @@ p {
   font-family: 'Crete Round';
   font-style: normal;
   font-weight: 200;
-  font-size: 25px;
+  font-size: 32px;
   line-height: 44px;
   display: flex;
   align-items: center;
