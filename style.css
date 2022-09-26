@@ -85,6 +85,7 @@ p {
   text-decoration: none;
   color: #ffff;
   padding: 0.9rem;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -253,7 +254,7 @@ p {
 .project {
   background-image: url(Images/Background.png);
   background-position: center;
-  background-size: no-repeat;
+  background-repeat: no-repeat;
   margin: 20px;
 }
 
@@ -352,7 +353,6 @@ p {
 
 .about-part {
   padding-left: 20px;
-
 }
 
 .aboutmehead {
@@ -368,6 +368,7 @@ p {
 }
 
 .aboutpara {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
   font-family: 'Inter' sans-serif;
   font-style: normal;
   font-weight: 400;
