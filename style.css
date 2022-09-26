@@ -107,8 +107,9 @@ p {
 
 .mainmyworks {
   background-color: rgb(251, 249, 249);
-  padding-top: 40px;
+  padding-top: 40%;
   margin-bottom: 20%;
+  padding-bottom: 40%;
 }
 
 .headtwo {
@@ -334,13 +335,16 @@ p {
 }
 
 .buttn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  font-style: normal;
   border: none;
   color: #edeae9;
   padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 17px;
   background-color: #f65803;
 }
 
