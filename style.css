@@ -94,14 +94,14 @@ p {
 }
 
 .social-media a {
-  color: #dbd8d7;
+  color: white;
   font-size: 25px;
   width: 16px;
 }
 
 .nav a:hover {
-  background: rgb(97, 91, 91);
-  color: rgb(97, 91, 91);
+  background: #f87213;
+  color: #dbd8d8;
   transition: 0.5s;
   height: 10px;
 }
@@ -109,7 +109,7 @@ p {
 .social-media a:hover {
   text-shadow: #f87213;
   background: hwb(25 0% 0%);
-  color: rgb(97, 91, 91);
+  color: #dcd9d7;
   transition: 0.4s;
 }
 
@@ -221,34 +221,24 @@ p {
   padding: 15px;
 }
 
-.button {
-  /* background-color: #ff6b00; */
-  padding: 15px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  font-style: normal;
-  color: #fdfcfc;
-  line-height: 24px;
-  cursor: pointer;
+.btn-primary {
+  background: #f55800;
+  border-radius: 4px;
   border: none;
-  width: fit-content;
+  color: #f4f5f7;
+  outline-color: none;
 }
 
-.button:hover {
-  background: #fff5e1;
-  border: 1px solid #f55800;
+.btn-primary:hover {
+  box-shadow: 0 8px 16px #fff5e1;
 }
 
-.button:enabled {
-  background-color: #f55800;
-  /* stylelint-disable-next-line color-hex-length */
-  color: #ffffff;
-}
-
-.button:disabled {
-  background: #f4f1f0;
-  color: #5b5957;
+.primary-font-style {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  letter-spacing: 3%;
+  line-height: 24px;
+  padding: 12px;
 }
 
 .project {
@@ -256,6 +246,9 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   margin: 20px;
+  height: 386px;
+  width: 327;
+  padding: 50px 0;
 }
 
 .contenthead {
@@ -313,34 +306,45 @@ p {
 
 .btn {
   width: 100%;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 13px;
-  justify-content: center;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: hsl(24, 29%, 97%);
-  background-color: #ff6b00;
   border: none;
-}
-
-.btn:hover {
-  background: 1px color #fff5e1;
-  border: none;
-  color: #f55800;
 }
 
 .btn:enabled {
-  background-color: #f55800;
-  /* stylelint-disable-next-line color-hex-length */
-  color: #ffffff;
+  background: #f55800;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 3%;
+  color: #fff;
+  padding: 12px;
+}
+
+.btn:hover {
+  color: #f55800;
+  border: 1px solid #f55800;
+  background-color: #fff5e1;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  letter-spacing: 3%;
+  line-height: 24px;
+  padding: 12px;
+}
+
+.btn:active {
+  background-color: #e05304;
+  color: #f4f1f0;
 }
 
 .btn:disabled {
   background: #f4f1f0;
-  color: #5b5957;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 3%;
+  color: #58595c;
+  padding: 12px;
 }
 
 .aboutsection {
@@ -387,34 +391,46 @@ p {
 }
 
 .buttn {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  font-style: normal;
+  width: 50%;
   border: none;
-  color: #edeae9;
-  padding: 15px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #f65803;
-}
-
-.btton:hover {
-  background: 1px color #fff5e1;
-  border: none;
-  color: #f55800;
 }
 
 .buttn:enabled {
-  background-color: #f55800;
-  /* stylelint-disable-next-line color-hex-length */
-  color: #ffffff;
+  background: rgba(245, 88, 0, 1);
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 3%;
+  color: rgba(255, 255, 255, 1);
+  padding: 12px;
 }
 
-.btton:disabled {
+.buttn:hover {
+  color: #f55800;
+  border: 1px solid #f55800;
+  background-color: #fff5e1;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  letter-spacing: 3%;
+  line-height: 24px;
+  padding: 12px;
+}
+
+.buttn:active {
+  background-color: #e05304;
+  color: white;
+}
+
+.buttn:disabled {
   background: #f4f1f0;
-  color: #5b5957;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 3%;
+  color: #58595c;
+  padding: 12px;
 }
 
 .line {
