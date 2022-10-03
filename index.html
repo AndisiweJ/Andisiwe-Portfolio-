@@ -232,39 +232,29 @@
 </article>
 </section>
 <footer class="footer">
-    <div class="containers"> 
+    <div class="containers">
     <div  class="textheads" >
     <h2 class="contactheads">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2></div>
-    <form action="https://formspree.io/f/xrgdkqrd" class="myforms">
+    <form action="https://formspree.io/f/xrgdkqrd" method="post" class="myforms">
         <ul class="textfields">
             <li>
                 <hr class="liners">
-        <input type="text" placeholder="Full name" id="name" required>
+        <input type="text" placeholder="Full name" id="name" name="name" required>
         </li>
         
         <li>
             <hr class="liners2">
-            <input type="email" placeholder="Email address" id="email" required >
+            <input type="email" placeholder="Email address" id="email" name="email-address" required >
         </li>
-        
         <li>
-            <div class="textareahovers">
-            <div class="iconresizer">
+            <button type="submit" class="button button2">Get in touch</button>
+        </li>
+        <li>
             <div class="textcontainer">
-            <input type="text" placeholder="Enter text here" id="textarea" required></div></div></div>
-        </li>
-        <li>
-            <button type="button" class="buttonsub">Get in touch</button>
+            <textarea placeholder="Enter text here" id="textarea" name="comment" required></textarea>
+        </div>
         </li>
         </ul>
-
-        </div>
-        <div class="textareahovers"></div>
-            <div class="iconresizer"></div>
-                <div class="textcontainer"></div>
-
-        <hr class=divider>
-            </div>
     </form>
         <nav class="navigation">
         <ul class="socialmedia">
@@ -289,6 +279,7 @@
                     <img src="Images/medium2.svg" alt="Meduim"></a>
             </li>
         </ul>
+        <hr class="shaper">
         <hr class="shape">
         </nav>
     </div>
