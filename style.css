@@ -225,7 +225,7 @@ button:disabled {
 .selections {
   font-family: "Inter", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   padding-left: 0;
@@ -689,28 +689,28 @@ textarea:focus {
   }
 
   .art-container.one {
-    background-image: url(Images/ImgPlaceholder1.png);
+    background-image: url(Images/electric.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
   }
 
   .art-container.four {
-    background-image: url(Images/Background.png);
+    background-image: url(Images/ImgPlaceholder1.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .art-container.two,
   .art-container.five {
-    background-image: url(Images/imgplace202.png);
+    background-image: url(Images/climate.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .art-container.three,
   .art-container.six {
-    background-image: url(Images/imageplaceholder303.png);
+    background-image: url(Images/movie.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
