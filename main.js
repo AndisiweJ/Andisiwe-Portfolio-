@@ -1,42 +1,282 @@
-const btn = document.getElementById("btn");
-const closeButton = document.getElementById("close");
-const nav = document.querySelector(".desk-head");
-const list = document.querySelectorAll(".common-li");
+const openBtn = document.querySelector(".menu-icon-open");
+const closeBtn = document.querySelector(".menu-icon-close");
+const menuListContainer = document.querySelector(".menu-list");
+const projectContainer = document.querySelector(".works-container");
+const modalContainer = document.querySelector(".modal-container");
+const menuLinks = document.querySelectorAll(".menu-link");
 
-const portfolioLink = document.querySelector("#portfolio");
-const portfolio = document.querySelector(".work-section");
-const aboutLink = document.querySelector("#about");
-const about = document.querySelector(".about-me");
-const contactLink = document.querySelector("#contact");
-const contact = document.querySelector(".last-contact");
+const openElements = () => {
+  openBtn.classList.add("hidden");
+  closeBtn.classList.remove("hidden");
+  closeBtn.classList.add("visible");
+  menuListContainer.classList.remove("hidden");
+};
 
-// function closeBtn() {
-//   nav.classList.remove("desk-li-menu");
-//   nav.style.display = "none";
-// }
+const closeElements = () => {
+  closeBtn.classList.add("hidden");
+  openBtn.classList.remove("hidden");
+  openBtn.classList.add("visible");
+  menuListContainer.classList.add("hidden");
+};
 
-function openPortfolio() {
-  portfolio.scrollIntoView();
+openBtn.addEventListener("click", openElements);
+closeBtn.addEventListener("click", closeElements);
+
+menuListContainer.addEventListener("click", closeElements);
+
+const projectData = [
+  {
+    id: "1",
+    name: "Spain's Electricity Shortfall",
+    technologies: ["Pandas", "Python", "Git", "Jupyter Notebook"],
+    image: "./Img/electric.jpg",
+    link: "https://github.com/Egbetimmy/RR14-Advanced-Regression",
+    linkSource: "https://github.com/Egbetimmy/RR14-Advanced-Regression",
+  },
+  {
+    id: "2",
+    name: "Twitter Sentiment Analysis",
+    technologies: ["Pandas", "Python", "Git", "Jupyter Notebook"],
+    image: "./Img/climate.jpg",
+    link: "https://github.com/mtshasiwe/2301AC_TEAM_4_BM",
+    linkSource: "https://github.com/mtshasiwe/2301AC_TEAM_4_BM",
+  },
+  {
+    id: "3",
+    name: "Movie Recommender System",
+    technologies: ["Pandas", "Python", "Git", "Jupyter Notebook"],
+    image: "./Img/movie.jpg",
+    link: "https://github.com/Team-BM2-Unsupervised/Unsupervised-Predict-Movie-Recommendation-Predict",
+    linkSource: "https://github.com/Team-BM2-Unsupervised/Unsupervised-Predict-Movie-Recommendation-Predict",
+  },
+  {
+    id: "4",
+    name: "Student Tracking Dashboard",
+    technologies: ["Pandas", "Python", "Git", "Jupyter Notebook"],
+    image: "./Img/logistics.jpg",
+    link: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first",
+    linkSource: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first",
+  },
+  {
+    id: "5",
+    name: "Language Hackerthon",
+    technologies: ["Pandas", "Python", "Git", "Jupyter Notebook"],
+    image: "./Img/legacy-code-update.jpg",
+    link: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first/",
+    linkSource: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first",
+  },
+  {
+    id: "6",
+    name: "My Podcast",
+    technologies: ["Data Science", "Talk" , "Socio-Economic Issues"],
+    image: "./Img/pexels-cottonbro-studio-6686455.jpg",
+    link: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first/",
+    linkSource: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first",
+  },
+];
+
+function generateModalMarkup(data) {
+  const listMarkup = data.technologies
+    .map((item) => `<li class="skill-tag skill-tag--grey">${item}</li>`)
+    .join("");
+
+  const modalMarkup = ` 
+  <div class="backdrop">
+
+  <div class="modal">
+    <svg class="modal-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+         />
+    </svg>
+    <img class="modal-img" src="${data.image}" alt="Modal desktop">
+   
+      <h2>${data.name}</h2>
+      <div class="button-container ">
+        <a href="${data.link}">See Live <img src="./img/modal-live-icon.svg" alt="Modal icon"></a>
+        <a target="__blank" href="${data.linkSource}">Source Code <img src="./img/modal-gihub-icon.svg" alt="Modal icon"> </a>
+      </div>
+   
+    <ul class="modal-skills">
+      ${listMarkup}
+    </ul>
+    <p class="modal-description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, saepe
+      voluptatibus. Nihil exercitationem facilis, eligendi!
+    </p>
+
+  </div>
+</div>`;
+
+  return modalMarkup;
 }
 
-function openAbout() {
-  about.scrollIntoView();
-}
+const openModal = (id) => {
+  const activeModalData = projectData.find((el) => el.id === `${id}`);
 
-function openContact() {
-  contact.scrollIntoView();
-}
-function navList() {
-  nav.classList.add("desk-li-menu");
-  nav.style.display = "block";
-}
+  const modal = generateModalMarkup(activeModalData);
+  document.querySelector(".modal-container").innerHTML = modal;
+};
 
-list.forEach((element) => {
-  element.addEventListener("click", closeBtn);
+const markup = (data) => {
+  const listMarkup = data.technologies
+    .map((item) => `<li class="skill-tag skill-tag--grey">${item}</li>`)
+    .join("");
+
+  const markup = `<div class="work">
+  <div class="image-container">
+    <img src="${data.image}" alt="${data.name}" />
+  </div>
+  <div class="details-container">
+    <h3>${data.name}</h3>
+    <ul class="skills">
+      ${listMarkup}
+    </ul>
+    <button onclick="openModal(${data.id})" class="button button-primary">See projects</button>
+  </div>
+     
+  </div>`;
+
+  return markup;
+};
+
+const closeModal = (e) => {
+  const clicked = e.target.closest(".modal-close-icon");
+  if (!clicked) return;
+  document.querySelector(".modal-container").innerHTML = "";
+};
+
+const injectMarkup = () => {
+  let allProjectsMarkup = "";
+
+  projectData.forEach((item) => {
+    allProjectsMarkup += markup(item);
+  });
+
+  projectContainer.insertAdjacentHTML("afterbegin", allProjectsMarkup);
+};
+
+injectMarkup();
+
+modalContainer.addEventListener("click", (e) => {
+  closeModal(e);
 });
 
-btn.addEventListener("click", navList);
-closeButton.addEventListener("click", closeBtn);
-portfolioLink.addEventListener("click", openPortfolio);
-aboutLink.addEventListener("click", openAbout);
-contactLink.addEventListener("click", openContact);
+// SUBMIT FORM
+const form = document.querySelector(".form");
+const feedbackEl = document.querySelector(".form-feedback");
+const SUBMIT_LINK = "https://formspree.io/f/xrgdkqrd";
+
+const clearUpNotice = () => {
+  setTimeout(() => {
+    feedbackEl.classList.remove("email-success");
+    feedbackEl.classList.remove("email-fail");
+    feedbackEl.textContent = "";
+  }, 3000);
+};
+
+const showSuccess = () => {
+  feedbackEl.classList.remove("email-fail");
+  feedbackEl.classList.add("email-success");
+  clearUpNotice();
+};
+
+const showError = () => {
+  feedbackEl.classList.remove("email-success");
+  feedbackEl.classList.add("email-fail");
+  clearUpNotice();
+};
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  // const name = event.target.name.value;
+  const email = event.target.email.value;
+  // const message = event.target.message.value;
+
+  const emailRegex = /^[a-z]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
+
+  if (!emailRegex.test(email)) {
+    showError();
+    feedbackEl.textContent = "Invalid Email (Email must be lowercase).";
+    return;
+  }
+
+  const formData = new FormData(event.target);
+
+  try {
+    const response = await fetch(SUBMIT_LINK, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      // SUCCESS
+      showSuccess();
+      form.reset();
+      feedbackEl.textContent =
+        "Email successfully sent. We will get back to you soonest possible.";
+
+      // Clear local storage
+      if (localStorage.getItem("userFormData")) {
+        localStorage.removeItem("userFormData");
+      }
+      return;
+    }
+    throw new Error("Oops! There was a problem submitting your form");
+  } catch (error) {
+    // Any other error
+    showError();
+    feedbackEl.textContent = `${error.message}`;
+  }
+};
+
+form.addEventListener("submit", handleSubmit);
+
+// SAVING FORM USER INFO TO LOCAL
+const nameInputEl = document.querySelector(".name");
+const emailInputEl = document.querySelector(".email");
+const messageInputEl = document.querySelector(".message");
+
+const saveToLocal = () => {
+  const formInputs = {
+    name: nameInputEl.value,
+    email: emailInputEl.value,
+    message: messageInputEl.value,
+  };
+
+  localStorage.setItem("userFormData", JSON.stringify(formInputs));
+};
+
+[nameInputEl, emailInputEl, messageInputEl].forEach((input) => {
+  input.addEventListener("change", saveToLocal);
+});
+
+// On Page load, Check local storage and retreave data
+if (localStorage.getItem("userFormData")) {
+  const parsedFormData = JSON.parse(localStorage.getItem("userFormData"));
+
+  nameInputEl.value = parsedFormData.name;
+  emailInputEl.value = parsedFormData.email;
+  messageInputEl.value = parsedFormData.message;
+}
+
+// SMOOTH SCROLL
+menuLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const clickedID = e.target.getAttribute("href").replace("#", "");
+    document.getElementById(clickedID).scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+// SCROLL TO BUTTON
+const scrollToBtn = document.getElementById("scroll-to");
+scrollToBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementById("scroll-to").scrollIntoView({ behavior: "smooth" });
+});
