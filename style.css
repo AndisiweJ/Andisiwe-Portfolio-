@@ -358,6 +358,7 @@ body {
 .button-primary {
   background-color: var(--color-secondary);
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .button-primary:hover {

@@ -30,16 +30,16 @@ const projectData = [
     name: "Spain's Electricity Shortfall",
     technologies: ["Pandas", "Python", "Git", "Jupyter Notebook"],
     image: "./Img/electric.jpg",
-    link: "https://github.com/Egbetimmy/RR14-Advanced-Regression",
-    linkSource: "https://github.com/Egbetimmy/RR14-Advanced-Regression",
+    link: "https://github.com/AndisiweJ/RR14-Advanced-Regression.git",
+    linkSource: "https://github.com/AndisiweJ/RR14-Advanced-Regression",
   },
   {
     id: "2",
     name: "Twitter Sentiment Analysis",
     technologies: ["Pandas", "Python", "Git", "Jupyter Notebook"],
     image: "./Img/climate.jpg",
-    link: "https://github.com/mtshasiwe/2301AC_TEAM_4_BM",
-    linkSource: "https://github.com/mtshasiwe/2301AC_TEAM_4_BM",
+    link: "https://github.com/AndisiweJ/2301AC_TEAM_4_BM.git",
+    linkSource: "https://github.com/AndisiweJ/2301AC_TEAM_4_BM",
   },
   {
     id: "3",
@@ -54,24 +54,24 @@ const projectData = [
     name: "Student Tracking Dashboard",
     technologies: ["Pandas", "Python", "Git", "Jupyter Notebook"],
     image: "./Img/logistics.jpg",
-    link: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first",
-    linkSource: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first",
+    link: "https://github.com/Explore-AI/internship-project-2301-15.git",
+    linkSource: "https://github.com/Explore-AI/internship-project-2301-15",
   },
   {
     id: "5",
     name: "Language Hackerthon",
     technologies: ["Pandas", "Python", "Git", "Jupyter Notebook"],
     image: "./Img/legacy-code-update.jpg",
-    link: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first/",
-    linkSource: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first",
+    link: "https://github.com/AndisiweJ/Language-Classification-Hackerthon.git",
+    linkSource: "https://github.com/AndisiweJ/Language-Classification-Hackerthon",
   },
-  {
+  { 
     id: "6",
     name: "My Podcast",
     technologies: ["Data Science", "Talk" , "Socio-Economic Issues"],
     image: "./Img/pexels-cottonbro-studio-6686455.jpg",
-    link: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first/",
-    linkSource: "https://github.com/AndisiweJ/Portfolio-Set-up-and-Mobile-first",
+    link: "https://feeds.buzzsprout.com/2234733.rss",
+    linkSource: "https://feeds.buzzsprout.com/2234733.rss",
   },
 ];
 
@@ -195,7 +195,7 @@ const handleSubmit = async (event) => {
   const email = event.target.email.value;
   // const message = event.target.message.value;
 
-  const emailRegex = /^[a-z]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
+  const emailRegex = /^[a-z_A-Z\-0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
 
   if (!emailRegex.test(email)) {
     showError();
